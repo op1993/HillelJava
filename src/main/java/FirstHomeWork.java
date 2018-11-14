@@ -5,25 +5,21 @@ public class FirstHomeWork {
 
     public static void main(String[] args) {
         FirstHomeWork firstHomeWork = new FirstHomeWork();
-        int array[][] = firstHomeWork.fillArray(2, 100, 0, 1);
+        int array[][] = firstHomeWork.fillArray(10, 100, 0, 100);
         firstHomeWork.printValuesFromArray(array);
 
         firstHomeWork.printNameAndSurname();
     }
 
     public int[][] fillArray(int sizeA, int sizeB, int minValue, int maxValue) {
-        if (sizeA <= 0) {
+        if (sizeA <= 0 || sizeB <= 0 ) {
             try {
                 throw new Exception();
             } catch (Exception e) {
-                System.out.println("Value sizeA should be  >  0");
-            }
-        }
-        if (sizeB <= 0) {
-            try {
-                throw new Exception();
-            } catch (Exception e) {
-                System.out.println("Value sizeB should be  >  0");
+                System.out.println("Value \"sizeA\" and \"sizeB\"  should be  >  0" +
+                        " \nCurrent  sizeA  = " + sizeA + " " +
+                        " \nCurrent value for sizeB  = " + sizeB
+                );
             }
         }
         if (minValue < 0) {
