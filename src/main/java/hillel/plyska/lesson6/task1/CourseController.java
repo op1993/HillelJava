@@ -94,11 +94,10 @@ public class CourseController {
 
     public void printStudentProgressPerTeacher(String teacherName,String studentId, String courseName, List<Course>courses ){
         for (Course course: courses){
-            if (course.getName().equals(courseName) || course.getTeacher().teacherName.equals(teacherName)){
+            if (course.getName().equals(courseName) && course.getTeacher().teacherName.equals(teacherName)){
                 for (Student student :course.getStudents()){
                     if (student.getId().equals(studentId)){
-                        System.out.println(course.getLectures().toString());
-
+                        System.out.println(course.toString());
                     }
                 }
             }
