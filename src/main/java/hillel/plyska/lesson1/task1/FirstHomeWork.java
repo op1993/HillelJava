@@ -1,3 +1,5 @@
+package hillel.plyska.lesson1.task1;
+
 import java.util.Random;
 
 public class FirstHomeWork {
@@ -5,23 +7,25 @@ public class FirstHomeWork {
 
     public static void main(String[] args) {
         FirstHomeWork firstHomeWork = new FirstHomeWork();
-        int array[][] = firstHomeWork.fillArray(10, 100, 0, 100);
+        int array[][] = firstHomeWork.fillArray(-10, 100, 0, 1);
         firstHomeWork.printValuesFromArray(array);
 
         firstHomeWork.printNameAndSurname();
+
+
     }
 
     public int[][] fillArray(int sizeA, int sizeB, int minValue, int maxValue) {
         if (sizeA <= 0 || sizeB <= 0 ) {
             try {
-                throw new Exception();
-            } catch (Exception e) {
-                System.out.println("Value \"sizeA\" and \"sizeB\"  should be  >  0" +
-                        " \nCurrent  sizeA  = " + sizeA + " " +
-                        " \nCurrent value for sizeB  = " + sizeB
-                );
-            }
+            throw new Exception();
+        } catch (Exception e) {
+            System.out.println("Value \"sizeA\" and \"sizeB\"  should be  >  0" +
+                    " \nCurrent  sizeA  = " + sizeA + " " +
+                    " \nCurrent value for sizeB  = " + sizeB
+            );
         }
+    }
         if (minValue < 0) {
             try {
                 throw new Exception();
