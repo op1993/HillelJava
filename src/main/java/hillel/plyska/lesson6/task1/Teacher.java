@@ -21,7 +21,7 @@ public class Teacher {
     @Override
     public String toString() {
         return "Teacher{" +
-                "teacherName='" + teacherName + '\'' +
+                "teacher='" + teacherName + '\'' +
                 '}';
     }
 }

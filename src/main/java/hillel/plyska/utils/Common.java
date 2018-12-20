@@ -1,5 +1,8 @@
 package hillel.plyska.utils;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Common {
     public static int [] initArray(int length){
         int array[] = new int[length];
@@ -8,4 +11,5 @@ public class Common {
         }
         return array;
     }
+
 }

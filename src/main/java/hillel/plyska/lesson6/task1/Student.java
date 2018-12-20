@@ -1,6 +1,8 @@
 package hillel.plyska.lesson6.task1;
 
 
+import java.util.List;
+
 public class Student {
     private String id;
     private String name;
@@ -9,6 +11,11 @@ public class Student {
         this.id = id;
         this.name = name;
 
+    }
+
+    public Student(String id, String name, List<Course> courseList) {
+        this.id = id;
+        this.name = name;
     }
 
     public Student() {

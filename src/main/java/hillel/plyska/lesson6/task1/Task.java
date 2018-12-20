@@ -1,8 +1,19 @@
 package hillel.plyska.lesson6.task1;
 
+import java.util.Map;
+
 public class Task {
-    private String name;
+    private String taskDescription;
     private String answer;
+    private Map<Student,String> answers;
+
+    public void setAnswers(Map<Student, String> answers) {
+        this.answers = answers;
+    }
+
+    public Map<Student, String> getAnswers() {
+        return answers;
+    }
 
     public String getAnswer() {
         return answer;
@@ -12,16 +23,16 @@ public class Task {
         this.answer = answer;
     }
 
-    public String getName() {
-        return name;
+    public String getTaskDescription() {
+        return taskDescription;
     }
 
-    public void setName(String tasks) {
-        this.name = tasks;
+    public void setTaskDescription(String tasks) {
+        this.taskDescription = tasks;
     }
 
     public Task(String tasks) {
-        this.name = tasks;
+        this.taskDescription = tasks;
     }
 
     public Task() {
@@ -31,7 +42,7 @@ public class Task {
     @Override
     public String toString() {
         return "Task{" +
-                "name='" + name + '\'' +
+                "taskDescription='" + taskDescription + '\'' +
                 ", answer='" + answer + '\'' +
                 '}';
     }

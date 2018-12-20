@@ -17,15 +17,19 @@ public class Main {
         Teacher teacher1 =  new Teacher("Oleh");
         Teacher teacher2 =  new Teacher("Denis");
         Teacher teacher3 =  new Teacher("Alex");
-        courses.add(new CourseController("Math" , teacher1,10,2,20).createCourses());
-        courses.add(new CourseController("Java", teacher2,20,3,5).createCourses());
-        courses.add(new CourseController("Logistics",teacher3,14,4,4).createCourses());
+        courses.add(new CourseController(teacher1 ,"Math"  ,20,3,4).createCourse());
+        courses.add(new CourseController(teacher2 ,"Java",20,4,5).createCourse());
+        courses.add(new CourseController(teacher3,"ololo",20,4,4).createCourse());
         CourseController courseController = new CourseController();
-        courseController.setAnswerForLectureTask("3","Math", "Lecture 1" ,"Task 1", "MY FIRST ANNSWER", courses);
+        courseController.setAnswerForLectureTask("3","Math", "Lecture 1" ,"Task 1", "MY FIRST ANSWER Lect 1 /1", courses);
+        courseController.setAnswerForLectureTask("3","Math", "Lecture 1" ,"Task 2", "MY FIRST ANSWER Lect 1 /2", courses);
+        courseController.setAnswerForLectureTask("3","Math", "Lecture 2" ,"Task 2", "MY FIRST ANSWER Lect 2 /2", courses);
+        courseController.setAnswerForLectureTask("3","Math", "Lecture 3" ,"Task 2", "MY FIRST ANSWER Lect 3 /2", courses);
+        courseController.setAnswerForLectureTask("2","Java", "Lecture 1" ,"Task 1", "MY FIRST ANSWER Lect 1 /1", courses);
+        courseController.setAnswerForLectureTask("1","Java", "Lecture 1" ,"Task 1", "MY FIRST ANSWER Lect 1 /1", courses);
 
-//        courseController.printStudentProgressForCourse("3", "Math", courses);
-        courseController.printStudentProgressPerTeacher("Denis", "1" , "Java", courses);
-
+        courseController.printStudetnsAnswerForAllLectures("Math", "3" , courses);
+        courseController.printStudetnsAnswerForAllLectures("Java", "2" , courses);
 
     }
 
