@@ -24,66 +24,6 @@ public class CourseController {
     public CourseController() {
     }
 
-    public static void main(String[] args) {
-        CourseController courseController = new CourseController(
-                new Teacher("Dd"),
-                "course 1",
-                2,
-                2,
-                3);
-        CourseController courseController2 = new CourseController(
-                new Teacher("Ddddd"),
-                "course 2",
-                32,
-                4,
-                5);
-
-        Course course = courseController.createCourse();
-        Course course2 = courseController2.createCourse();
-        System.out.println(course2.getLectures().toString());
-        System.out.println(course.getLectures().toString());
-        List<Course> courses = new ArrayList<>();
-        courses.add(course);
-        courses.add(course2);
-        System.out.println("COURSE NAME = " + course.getName());
-        System.out.println("COURSE TEACHER = " + course.getTeacher());
-
-
-        courseController.setAnswerForLectureTask("1", "course 1", "Lecture 1", "Task 1", "Answer 1 ", courses);
-        courseController.setAnswerForLectureTask("2", "course 1", "Lecture 1", "Task 1", "Answer 12 ", courses);
-//        courseController.setAnswerForLectureTask("2","course 1", "Lecture 1", "Task 2","Answer 12 ", courses);
-
-
-        System.out.println("---------------------");
-        System.out.println("---------------------");
-        System.out.println("---------------------");
-        System.out.println("---------------------");
-        System.out.println("---------------------");
-        System.out.println("---------------------");
-        System.out.println("---------------------");
-
-        for (Course course1 : courses) {
-            System.out.println("COURSE NAME = " + course1.getName());
-            System.out.println("COURSE TEACHER = " + course1.getTeacher());
-            for (Lecture lecture : course1.getLectures()) {
-                System.out.println(lecture.getLectureName());
-                for (Task task : lecture.getTaskList()) {
-                    System.out.println(task.getTaskDescription());
-                    if (task.getAnswers() != null) {
-                        for (Map.Entry<Student, String> m : task.getAnswers().entrySet()) {
-                            System.out.println(m.getKey().getId() + "   " + m.getValue());
-
-                        }
-
-
-                    }
-                }
-
-            }
-            System.out.println("--------------------");
-        }
-    }
-
     public void printStudetnsAnswerForAllLectures(String courseName, String  studentId,List<Course>courses){
         for (Course course:courses){
             if (course.getName().equals(courseName)){
