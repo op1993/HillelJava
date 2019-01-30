@@ -12,7 +12,10 @@ public void addTest(){
     list.add("3");
     list.add("2");
     list.add("1");
+        System.out.println(list.size());
     assertTrue(list.size() ==3);
-        assertTrue(list.contains("3"));
+    list.remove("3");
+        System.out.println(list.size());
+//        assertTrue(list.contains("3"));
 }
 }

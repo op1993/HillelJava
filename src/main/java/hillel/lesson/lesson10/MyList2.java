@@ -109,7 +109,7 @@ public class MyList2 <E> implements Collection<E> {
                 prev = node;
                 node = node.next;
             }
-        return false;
+        return true;
     }
 
     @Override
